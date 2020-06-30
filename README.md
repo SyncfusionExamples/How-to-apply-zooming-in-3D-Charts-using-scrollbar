@@ -17,7 +17,8 @@ Step 1: Create Scrollbars and register the ValueChanged event for getting the po
 		<ColumnDefinition/>
 	</Grid.ColumnDefinitions>
 		<TextBlock Text="X-Axis ZoomFactor    :"  VerticalAlignment="Center"/>
-		<ScrollBar Height="15" Grid.Column="1" Orientation="Horizontal" Margin="35,5,10,5" x:Name="zoomFactor" Minimum="0" Maximum="1" Value="1"
+		<ScrollBar Height="15" Grid.Column="1" Orientation="Horizontal" Margin="35,5,10,5" 
+		x:Name="zoomFactor" Minimum="0" Maximum="1" Value="1"
 		ValueChanged="zoomFactor_ValueChanged"/>
 </Grid>
 <!--ZoomPosition-->
@@ -63,7 +64,8 @@ Step 3: Update the [LabelContent](https://help.syncfusion.com/cr/cref_files/wpf/
 **XAML**
 ```
 <chart:SfChart3D.PrimaryAxis>
-	<chart:NumericalAxis3D  Interval="1" EnableAutoIntervalOnZooming="False" LabelCreated="xAxis_LabelCreated" LabelRotationAngle="-90" x:Name="xAxis" />
+	<chart:NumericalAxis3D  Interval="1" EnableAutoIntervalOnZooming="False" LabelCreated="xAxis_LabelCreated"
+	LabelRotationAngle="-90" x:Name="xAxis" />
 </chart:SfChart3D.PrimaryAxis>
 ```
 
