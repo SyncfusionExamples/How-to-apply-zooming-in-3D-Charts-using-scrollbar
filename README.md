@@ -60,7 +60,7 @@ private void UpdateRange()
 ```
 Step 3: Update the [LabelContent](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartAxisLabel~LabelContent.html) property based on the value of [Position](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartAxisLabel.html) property of [ChartAxisLabel](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartAxisLabel.html) in [LabelCreated](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartAxis~LabelCreated_EV.html) event.
 
-**[XAML]**
+**XAML**
 ```
 <chart:SfChart3D.PrimaryAxis>
 	<chart:NumericalAxis3D  Interval="1" EnableAutoIntervalOnZooming="False" LabelCreated="xAxis_LabelCreated" LabelRotationAngle="-90" x:Name="xAxis" />
