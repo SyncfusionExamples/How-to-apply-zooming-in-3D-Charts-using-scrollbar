@@ -85,6 +85,9 @@ private void xAxis_LabelCreated(object sender, LabelCreatedEventArgs e)
 }
 ```
 
+![x-axis scrolling](https://github.com/user-attachments/assets/73d3f639-a7dc-4a04-9368-9c663b4a94de)
+
+
 Refer to this KB [article](https://www.syncfusion.com/kb/2904/how-to-set-default-zoom-pan-position-for-charts), for applying default zoom and pan position in SfChart.
 
 KB article - [How to apply zooming in 3D Charts using scrollbar?](https://www.syncfusion.com/kb/11667/how-to-apply-zooming-in-3d-charts-using-scrollbar)

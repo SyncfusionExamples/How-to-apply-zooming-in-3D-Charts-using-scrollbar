@@ -1,0 +1,58 @@
+﻿<Window x:Class="Sample1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Sample1"
+        xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
+        Title="Trunk_Sample" WindowState="Maximized"
+        x:Name="window" 
+        Height="500" Width="725">
+    <Grid >
+        <StackPanel>
+            <chart:SfChart3D   x:Name="chart" Margin="5" Height="500">
+
+                <chart:SfChart3D.PrimaryAxis>
+                    <chart:NumericalAxis3D  Interval="1" EnableAutoIntervalOnZooming="False" LabelCreated="xAxis_LabelCreated"
+                                    LabelRotationAngle="-90" x:Name="xAxis" />
+                </chart:SfChart3D.PrimaryAxis>
+
+                <chart:SfChart3D.SecondaryAxis>
+                    <chart:NumericalAxis3D  x:Name="yAxis">
+                    </chart:NumericalAxis3D>
+                </chart:SfChart3D.SecondaryAxis>
+
+                <chart:ColumnSeries3D XBindingPath="XValue" YBindingPath="YValue" ItemsSource="{Binding Data}">
+                    <chart:ColumnSeries3D.AdornmentsInfo>
+                        <chart:ChartAdornmentInfo3D ShowLabel="True"/>
+                    </chart:ColumnSeries3D.AdornmentsInfo>
+                </chart:ColumnSeries3D>
+            </chart:SfChart3D>
+            
+            <!--ZoomFactor-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="X-Axis ZoomFactor    :"  VerticalAlignment="Center"/>
+                <ScrollBar Height="15" Grid.Column="1" Orientation="Horizontal" Margin="35,5,10,5" 
+                           x:Name="zoomFactor"
+                       Minimum="0" Maximum="1" Value="1"
+                          ValueChanged="zoomFactor_ValueChanged"/>
+            </Grid>
+            
+            <!--ZoomPosition-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="X-Axis ZoomPosition :"  VerticalAlignment="Center"/>
+                <ScrollBar Height="15" Grid.Column="1" Orientation="Horizontal" 
+                           x:Name="zoomPosition" 
+                           Margin="35,5,10,5" Minimum="0" Maximum="1"
+                           ValueChanged="zoomPosition_ValueChanged"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>    
+</Window>
